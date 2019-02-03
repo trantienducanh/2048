@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Game 2048</title>
+	<link href= "static/main.css" type="text/css" rel = "stylesheet">
+	<script src = "https://code.jquery.com/jquery-1.12.4.js" type="text/javascript"></script>
+	<script src = "https://code.jquery.com/ui/1.12.1/jquery-ui.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id = 'main'>
+		<div id = 'header'>
+			<div id = 'name_of_game'><p class = "game_names">Game 2048</p></div>
+			<div id = 'info'>
+				<div id = 'score'>
+					<div id = 'best_score'>
+						BEST
+						<p id = 'best'>0</p>
+					</div>
+					<div id = 'my_score'>
+						SCORE
+						<p id = 'mine'>0</p>
+					</div>
+				</div>
+				<div id = "button">
+					<button type = 'submit' id = "replay"><p>New Game</p></button>
+					<div id = 'playmode'>
+					  <p class="string">PLAY MODE</p>
+					  <input type="button" value = "4x4" id = "mode4">
+						<input type = "button" value = "8x8" id = "mode8">
+						<div style="clear:left"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id = "game">
+			<canvas id = 'canvas' width="550px" height="550px"></canvas>
+		</div>
+		<div id ="leaderboard">
+			<p class = "game_names">LEADER BOARD</p>
+				<ul id = "board">
+				  <li ><a href="#tab1" id = "link1">Mode 4x4</a></li>
+				  <li ><a href = "#tab2" id = "link2">Mode 8x8</a></li>
+				</ul>
+			<div id = "tab1">
+				<div class = "wrapper">
+					<div class = "person">
+						<p class = "name">Player 1</p>
+						<p class = "lead_score">100</p>
+						<div style="clear:both"></div>
+					</div>
+					<div class = "person">
+						<p class = "name">Player 2</p>
+						<p class = "lead_score">15000</p>
+					</div>
+				</div>
+			</div>
+			<div id = "tab2">
+				<div class = "wrapper">
+					<div class = "person">
+						<p class = "name">Another</p>
+						<p class = "lead_score">100</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id = "confirm_new">
+		<div id = "new">
+			<p> You've just click on NEW GAME button.</p>
+			<p> Your game will be deleted.</p>
+			<p>Are you sure?</p>
+		</div>
+		<div id ="button">
+			<button type="button" id="yes_new">Yes</button>
+			<button type="button" id="cancel_new">Cancel</button>
+		</div>
+	</div>
+	
+	<div id = "confirm">
+		<div id = "changemode">
+			<p> You've just click on CHANGE MODE button.</p>
+			<p> Your game will be deleted.</p>
+			<p>Are you sure to change mode?</p>
+		</div>
+		<div id ="button">
+			<button type="button" id="yes">Yes</button>
+			<button type="button" id="cancel">Cancel</button>
+		</div>
+	</div>
+	
+	<div id = "end_game">
+		<div id = "end">
+			<p id = "title">GAME OVER</p>
+			<p id ="new_score">YOUR SCORE: </p>
+			<input type = "text" placeholder="Enter your name">
+		</div>
+		<div id ="button">
+			<button type="button" id="Ok">OK</button>
+		</div>
+	</div>
+	
+	
+	<script src = "static/main.js" type="text/javascript"></script>
+</body>
+</html>
